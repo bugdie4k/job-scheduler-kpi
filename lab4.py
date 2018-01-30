@@ -24,10 +24,12 @@ class Q:
         return self.q.task_done()
 
     def prn(self):
-        print("Q")
+        print("Queue")
+        print("       ^^^")
         for i, t in enumerate(list(self.q.queue)):
             print("el# {:<3d} : ".format(i), end='')
             t.prn()
+        print("       ^^^")
 
 # processor
 class P:
@@ -81,7 +83,7 @@ class State:
 
     @staticmethod
     def prn_procs(procs):
-        print("Ps")
+        print("Processors")
         for p in procs:
             p.prn()
 
